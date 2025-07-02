@@ -24,7 +24,7 @@
       "type": "widget",
       "accessLevel": "EVERYONE",
       "label": "Chat",
-      "path": "https://github.intuit.com/akirivedula/dc-specifications/tree/master/docs/public/chat.html"
+      "path": "/"
     },
     {
       "type": "sidebar",
