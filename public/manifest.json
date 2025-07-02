@@ -3,7 +3,7 @@
   "key": "sample55app",
   "name": "sample examples",
   "description": "Example of every UI entrypoint for an addon",
-  "baseUrl": "https://api.domainhr.com",
+  "baseUrl": "https://github.com/akiriveed/clockifyapp",
   "lifecycle": [
     {
       "type": "INSTALLED",
