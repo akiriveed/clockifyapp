@@ -1,0 +1,21 @@
+{
+  "schemaVersion": "1.2",
+  "key": "hrvertical-addon",
+  "name": "Test Addon",
+  "description": "A sample addon that renders a UI component",
+  "baseUrl": "https://github.com/akiriveed/clockifyapp",
+  "lifecycle": [
+  ],
+  "webhooks": [],
+  "components": [
+    {
+      "type": "widget",
+      "accessLevel": "EVERYONE",
+      "path": "/",
+      "iconPath": "/icon.png",
+      "label": "Weather Widget"
+    }
+  ],
+  "minimalSubscriptionPlan" : "FREE",
+  "scopes": []
+}
