@@ -1,7 +1,7 @@
 {
   "schemaVersion": "1.0",
   "key": "sample6858app",
-  "name": "SAMPLEADDON",
+  "name": "SAMPLETESTADDON",
   "description": "Example of every UI entrypoint for an addon",
   "baseUrl": "https://github.com/akiriveed/clockifyapp",
   "lifecycle": [
