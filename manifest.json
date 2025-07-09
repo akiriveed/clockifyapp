@@ -1,21 +1,158 @@
 {
-  "schemaVersion": "1.2",
-  "key": "hrvertical-addon",
-  "name": "Test Addon",
-  "description": "A sample addon that renders a UI component",
+  "schemaVersion": "1.0",
+  "key": "sampleapp276858",
+  "name": "SAMPLETESTPUBLICADDON",
+  "description": "Example of every UI entrypoint for an addon",
   "baseUrl": "https://github.com/akiriveed/clockifyapp",
   "lifecycle": [
+    {
+      "type": "INSTALLED",
+      "path": "/lifecycle/installed"
+    },
+    {
+      "type": "DELETED",
+      "path": "/lifecycle/uninstalled"
+    },
+    {
+      "type": "SETTINGS_UPDATED",
+      "path": "/lifecycle/settings-updated"
+    }
   ],
   "webhooks": [],
   "components": [
     {
       "type": "widget",
       "accessLevel": "EVERYONE",
+      "label": "Chat",
+      "path": "/"
+    },
+    {
+      "type": "sidebar",
+      "accessLevel": "EVERYONE",
       "path": "/",
-      "iconPath": "/icon.png",
-      "label": "Weather Widget"
+      "label": "Sidebar",
+      "iconPath": ""
+    },
+    {
+      "type": "timeoff.tab",
+      "accessLevel": "EVERYONE",
+      "path": "/",
+      "label": "Monthly Time Offs",
+      "iconPath": ""
+    },
+    {
+      "type": "schedule.tab",
+      "accessLevel": "EVERYONE",
+      "path": "/",
+      "label": "Schedule Tab",
+      "iconPath": ""
+    },
+    {
+      "type": "approvals.tab",
+      "accessLevel": "EVERYONE",
+      "path": "/",
+      "label": "Approvals Tab",
+      "iconPath": ""
+    },
+    {
+      "type": "reports.tab",
+      "accessLevel": "EVERYONE",
+      "path": "/",
+      "label": "Reports Tab",
+      "iconPath": ""
+    },
+    {
+      "type": "activity.tab",
+      "accessLevel": "EVERYONE",
+      "path": "/",
+      "label": "Activity Tab",
+      "iconPath": ""
+    },
+    {
+      "type": "team.tab",
+      "accessLevel": "EVERYONE",
+      "path": "/",
+      "label": "Team Tab",
+      "iconPath": ""
+    },
+    {
+      "type": "projects.tab",
+      "accessLevel": "EVERYONE",
+      "path": "/",
+      "label": "Projects Tab",
+      "iconPath": ""
     }
   ],
-  "minimalSubscriptionPlan" : "FREE",
+  "settings": {
+    "tabs": [
+      {
+        "id": "settings",
+        "name": "settings",
+        "settings": [
+          {
+            "id": "addon-dropdown-single-setting-1",
+            "name": "Dropdown single setting",
+            "accessLevel": "EVERYONE",
+            "type": "DROPDOWN_SINGLE",
+            "value": "option 1",
+            "allowedValues": [
+              "option 1",
+              "option 2",
+              "option 3"
+            ]
+          },
+          {
+            "id": "addon-dropdown-multiple-setting-1",
+            "name": "Dropdown multiple setting",
+            "accessLevel": "ADMINS",
+            "type": "DROPDOWN_MULTIPLE",
+            "value": [
+              "option 1",
+              "option 2"
+            ],
+            "allowedValues": [
+              "option 1",
+              "option 2",
+              "option 3"
+            ]
+          }
+        ],
+        "groups": [
+          {
+            "id": "addon-settings-group-1",
+            "title": "Addon settings group 1",
+            "header": {
+              "title": "Addon settings"
+            },
+            "description": "Addon settings group 1",
+            "settings": [
+              {
+                "id": "addon-txt-setting",
+                "name": "Txt setting",
+                "accessLevel": "ADMINS",
+                "type": "TXT",
+                "value": "Some text"
+              },
+              {
+                "id": "addon-link-setting",
+                "name": "Link setting",
+                "accessLevel": "EVERYONE",
+                "type": "LINK",
+                "value": "https://clockify.me"
+              },
+              {
+                "id": "addon-number-setting",
+                "name": "Number setting",
+                "accessLevel": "EVERYONE",
+                "type": "NUMBER",
+                "value": 5
+              }
+            ]
+          }
+        ]
+      }
+    ]
+  },
+  "minimalSubscriptionPlan": "FREE",
   "scopes": []
 }
